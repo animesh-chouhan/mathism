@@ -3,10 +3,11 @@
 
 @import "{{ site.theme }}";
 
-#main_content {
+.main_content_wrap #main_content {
     max-width: 1000px;
 }
 
-.inner {
+#header_wrap .inner {
+    padding: 30px 10px 30px 10px;
     max-width: 1000px;
 }
