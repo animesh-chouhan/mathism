@@ -2,6 +2,11 @@
 ---
 
 @import "{{ site.theme }}";
+
 #main_content {
+    max-width: 1000px;
+}
+
+.inner {
     max-width: 1000px;
 }
