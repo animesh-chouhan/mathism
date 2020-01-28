@@ -7,7 +7,7 @@ function setup() {
     frameRate(60);
     createCanvas(windowWidth, windowHeight);
 
-    const number = Math.floor(pow(windowWidth, 2) / 10000);
+    const number = Math.floor(windowWidth / 20);
     for (let i = 0; i < number; i++) {
         x = random(windowWidth);
         y = random(windowHeight);
