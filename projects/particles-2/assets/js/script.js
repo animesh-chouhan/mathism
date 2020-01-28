@@ -24,7 +24,7 @@ function setup() {
 }
 
 function draw() {
-    background(50);
+    background(30);
     particles.forEach((p, index) => {
         p.show();
         p.update();
@@ -67,7 +67,7 @@ class Particle {
         particles.forEach(p => {
             const d = this.pos.dist(p.pos);
             if (d < window.screen.width / 10) {
-                stroke('rgba(79,189,190,0.4)');
+                stroke('rgba(228,163,154,0.4)');
                 line(this.pos.x, this.pos.y, p.pos.x, p.pos.y);
             }
         });
