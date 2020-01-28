@@ -9,8 +9,8 @@ function setup() {
 
     // Less load on mobile devices
     let number;
-    if (windowWidth < 500) {
-        number = Math.floor(windowWidth / 30);
+    if (windowWidth < 800) {
+        number = Math.floor(windowWidth / 200);
     } else {
         number = Math.floor(windowWidth / 10);
     }
