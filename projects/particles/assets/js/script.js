@@ -8,10 +8,11 @@ function setup() {
     createCanvas(windowWidth, windowHeight);
 
     // Less load on mobile devices
+    let number;
     if (windowWidth < 500) {
-        const number = Math.floor(windowWidth / 30);
+        number = Math.floor(windowWidth / 30);
     } else {
-        const number = Math.floor(windowWidth / 10);
+        number = Math.floor(windowWidth / 10);
     }
 
     for (let i = 0; i < number; i++) {
