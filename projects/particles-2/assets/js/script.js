@@ -66,7 +66,7 @@ class Particle {
     connect(particles) {
         particles.forEach(p => {
             const d = this.pos.dist(p.pos);
-            if (d < window.screen.width / 10) {
+            if (d < 200) {
                 stroke('rgba(228,163,154,0.4)');
                 line(this.pos.x, this.pos.y, p.pos.x, p.pos.y);
             }

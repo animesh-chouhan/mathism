@@ -18,7 +18,7 @@ function setup() {
     for (let i = 0; i < number; i++) {
         x = random(windowWidth);
         y = random(windowHeight);
-        r = 3 * log(windowWidth);
+        r = 2 * log(windowWidth);
         c = random(colors);
         particles.push(new Particle(x, y, r, c));
     }
