@@ -9,10 +9,10 @@ function setup() {
 
     // Less load on mobile devices
     let number;
-    if (windowWidth < 800) {
-        number = Math.floor(windowWidth / 200);
+    if (window.screen.width < 600) {
+        number = Math.floor(window.screen.width / 10);
     } else {
-        number = Math.floor(windowWidth / 10);
+        number = Math.floor(window.screen.width / 15);
     }
 
     for (let i = 0; i < number; i++) {
