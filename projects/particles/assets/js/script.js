@@ -7,7 +7,13 @@ function setup() {
     frameRate(60);
     createCanvas(windowWidth, windowHeight);
 
-    const number = Math.floor(windowWidth / 20);
+    // Less load on mobile devices
+    if (windowWidth < 500) {
+        const number = Math.floor(windowWidth / 30);
+    } else {
+        const number = Math.floor(windowWidth / 10);
+    }
+
     for (let i = 0; i < number; i++) {
         x = random(windowWidth);
         y = random(windowHeight);
