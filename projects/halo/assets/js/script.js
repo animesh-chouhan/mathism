@@ -22,7 +22,7 @@ function setup() {
     if (window.screen.width < 600) {
         number = Math.floor(window.screen.width / 50);
     } else {
-        number = Math.floor(window.screen.width / 10);
+        number = Math.floor(window.screen.width / 20);
     }
 
     for (let i = 0; i < number; i++) {
