@@ -16,9 +16,9 @@ function setup() {
     }
 
     for (let i = 0; i < number; i++) {
-        x = random(windowWidth);
-        y = random(windowHeight);
         r = 2 * log(windowWidth);
+        x = random(r, windowWidth-r);
+        y = random(r, windowHeight-r);
         particles.push(new Particle(x, y, r));
     }
 }
@@ -74,10 +74,10 @@ class Particle {
     }
 
     edges() {
-        if (this.pos.x < 0 || this.pos.x > windowWidth) {
+        if (this.pos.x < this.radius || this.pos.x > windowWidth-this.radius) {
             this.vel.x *= -1;
         }
-        if (this.pos.y < 0 || this.pos.y > windowHeight) {
+        if (this.pos.y < this.radius || this.pos.y > windowHeight-this.radius) {
             this.vel.y *= -1;
         }
     }
