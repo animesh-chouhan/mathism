@@ -75,11 +75,11 @@ class Particle {
             this.pos.x += this.vel.x * particles_prop.vel_factor;
             this.pos.y += this.vel.y * particles_prop.vel_factor;
             this.halo += this.halo_vel * particles_prop.vel_factor;
-            this.halo_alpha -= particles_prop.vel_factor * this.radius / 200;
+            this.halo_alpha -= particles_prop.vel_factor * this.radius / 100;
         } else {
             this.pos.add(this.vel);
             this.halo += this.halo_vel;
-            this.halo_alpha -= this.radius / 200;
+            this.halo_alpha -= this.radius / 100;
 
         }
 
