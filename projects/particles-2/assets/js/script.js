@@ -4,7 +4,6 @@ const vel_factor = 5;
 const colors = ['#FCD581', '#92DCE5', '#FAB3A9', '#7FB285'];
 
 function setup() {
-    frameRate(60);
     createCanvas(windowWidth, windowHeight);
 
     // Less load on mobile devices
@@ -17,8 +16,8 @@ function setup() {
 
     for (let i = 0; i < number; i++) {
         r = 2 * log(windowWidth);
-        x = random(r, windowWidth-r);
-        y = random(r, windowHeight-r);
+        x = random(r, windowWidth - r);
+        y = random(r, windowHeight - r);
         particles.push(new Particle(x, y, r));
     }
 }
@@ -74,10 +73,10 @@ class Particle {
     }
 
     edges() {
-        if (this.pos.x < this.radius || this.pos.x > windowWidth-this.radius) {
+        if (this.pos.x < this.radius || this.pos.x > windowWidth - this.radius) {
             this.vel.x *= -1;
         }
-        if (this.pos.y < this.radius || this.pos.y > windowHeight-this.radius) {
+        if (this.pos.y < this.radius || this.pos.y > windowHeight - this.radius) {
             this.vel.y *= -1;
         }
     }

@@ -4,7 +4,6 @@ const vel_factor = 5;
 const colors = ['#FCD581', '#92DCE5', '#FAB3A9', '#7FB285'];
 
 function setup() {
-    frameRate(60);
     createCanvas(windowWidth, windowHeight);
 
     // Less load on mobile devices

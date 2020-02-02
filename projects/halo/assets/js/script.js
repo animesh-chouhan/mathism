@@ -8,13 +8,13 @@ const particles_prop = {
     vel_range: 3,
     vel_factor: 4,
     vel_halo: 0.2,
-    radius_factor: 3
+    radius_factor: 3,
+    halo_alpha_rate: 1
 }
 
 const particles = [];
 
 function setup() {
-    frameRate(60);
     createCanvas(windowWidth, windowHeight);
 
     // Less load on mobile devices
@@ -22,7 +22,7 @@ function setup() {
     if (window.screen.width < 600) {
         number = Math.floor(window.screen.width / 50);
     } else {
-        number = Math.floor(window.screen.width / 20);
+        number = Math.floor(window.screen.width / 30);
     }
 
     for (let i = 0; i < number; i++) {
@@ -57,6 +57,7 @@ class Particle {
         // Velocity
         this.vel = createVector(random(-particles_prop.vel_range, particles_prop.vel_range), random(-particles_prop.vel_range, particles_prop.vel_range));
         this.halo_vel = particles_prop.vel_halo;
+        this.halo_alpha_rate = particles_prop.halo_alpha_rate
     }
 
     show() {
@@ -79,7 +80,7 @@ class Particle {
         } else {
             this.pos.add(this.vel);
             this.halo += this.halo_vel;
-            this.halo_alpha -= this.radius / 100;
+            this.halo_alpha -= this.halo_alpha_rate * this.radius / 100;
 
         }
 
@@ -98,6 +99,11 @@ class Particle {
         if (this.halo_alpha < 0) {
             this.halo = this.radius;
             this.halo_alpha = 200;
+            this.halo_alpha_rate = particles_prop.halo_alpha_rate;
+        }
+        // Increase halo alpha speed
+        if (this.halo_alpha < 80) {
+            this.halo_alpha_rate = 2 * particles_prop.halo_alpha_rate;
         }
     }
 }
