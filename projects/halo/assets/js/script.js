@@ -5,7 +5,7 @@ const color = {
 }
 
 const particles_prop = {
-    vel_range: 3,
+    vel_range: 2,
     vel_factor: 4,
     vel_halo: 0.2,
     radius_factor: 3,
