@@ -1,5 +1,5 @@
 ## Mathism
-List of web compatible simulations and vizualizations:
+List of web compatible simulations and visualizations:
 
 1. [Cycloid](https://animesh-chouhan.github.io/mathism/projects/cycloid/)
 2. [Particles-1](https://animesh-chouhan.github.io/mathism/projects/particles-1/)
